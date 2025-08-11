@@ -37,7 +37,7 @@ AUTO_YESTERDAY = False
 SHEET_NAME   = "rss_feed_parser"
 
 # ────────── СПИСОК RSS ──────────
-FEED_LIST_PATH = "/kaggle/input/feed_list/feed_list.txt"
+FEED_LIST_PATH = "/kaggle/input/test-feed-list/test_feed_list.txt"
 
 def load_feeds(path: str = FEED_LIST_PATH) -> list[str]:
     try:
