@@ -32,8 +32,8 @@ from bs4 import BeautifulSoup
 MAX_CELL, ELLIPSIS = 50_000, "…"
 DATE_OVERRIDE = ""
 # Раскомментируйте, чтобы всегда использовать вчерашнюю дату
-# AUTO_YESTERDAY = True
-AUTO_YESTERDAY = False
+AUTO_YESTERDAY = True
+# AUTO_YESTERDAY = False
 SHEET_NAME   = "rss_feed_parser"
 
 # ────────── СПИСОК RSS ──────────
