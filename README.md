@@ -21,6 +21,7 @@
 1. Подготовьте на Kaggle два набора данных:
    - `credentials.json` от сервисного аккаунта Google;
    - `feed_list.txt` со списком RSS-источников.
+- Доступ сервисного аккаунта к Google Sheets.
 2. Запустите ноутбук или терминал Kaggle и выполните:
    ```bash
    python AI_news_feed_parser.py
