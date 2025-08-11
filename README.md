@@ -14,10 +14,14 @@
 ## Требования
 - Среда исполнения Python (скрипт ориентирован на запуск в Kaggle).
 - Файл учётных данных сервисного аккаунта Google по пути `/kaggle/input/credentials-json/credentials.json`.
+- Файл со списком RSS-источников по пути `/kaggle/input/feed_list/feed_list.txt`.
 - Доступ сервисного аккаунта к Google Sheets.
 
 ## Запуск
-1. Подготовьте на Kaggle набор данных, содержащий `credentials.json` от сервисного аккаунта Google.
+1. Подготовьте на Kaggle два набора данных:
+   - `credentials.json` от сервисного аккаунта Google;
+   - `feed_list.txt` со списком RSS-источников.
+- Доступ сервисного аккаунта к Google Sheets.
 2. Запустите ноутбук или терминал Kaggle и выполните:
    ```bash
    python AI_news_feed_parser.py
@@ -29,7 +33,7 @@
    - Лог доступен в файле `/kaggle/working/rss_feed_parser.log`.
 
 ## Настройка
-- Добавляйте или удаляйте адреса RSS в списке `rss_feeds`.
+- Редактируйте файл `feed_list.txt`, указывая источники RSS по одному в строке.
 - Изменяйте константы `SHEET_NAME`, `MAX_CELL`, `DATE_OVERRIDE` в коде при необходимости.
 - Для запуска вне Kaggle скорректируйте пути к логам и учётным данным.
 
