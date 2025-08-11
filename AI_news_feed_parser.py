@@ -31,6 +31,9 @@ from bs4 import BeautifulSoup
 
 MAX_CELL, ELLIPSIS = 50_000, "…"
 DATE_OVERRIDE = ""
+# Раскомментируйте, чтобы всегда использовать вчерашнюю дату
+# AUTO_YESTERDAY = True
+AUTO_YESTERDAY = False
 SHEET_NAME   = "rss_feed_parser"
 
 # ────────── СПИСОК RSS ──────────
@@ -53,6 +56,9 @@ clean = lambda h: BeautifulSoup(h, "html.parser").get_text(" ", strip=True)
 
 # ────────────── ДАТА ──────────────
 def get_date():
+    if AUTO_YESTERDAY:
+        return (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+
     d = DATE_OVERRIDE or os.getenv("DATE", "")
     if not d:
         try:
